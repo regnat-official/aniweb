@@ -25,10 +25,7 @@
 
         <section id="video-section" style="display: none;">
             <h2>Смотреть аниме</h2>
-            <video id="anime-video" controls width="600">
-                <source id="video-source" src="" type="video/mp4">
-                Ваш браузер не поддерживает видео.
-            </video>
+            <iframe id="anime-iframe" width="600" height="400" frameborder="0" allowfullscreen></iframe>
         </section>
     </main>
 
@@ -62,10 +59,9 @@
                         const selectedDub = document.getElementById('dub-select').value;
                         alert(`Вы выбрали озвучку: ${selectedDub}`);
 
-                        // Здесь устанавливаем URL видео с Anidub
-                        const videoSource = document.getElementById('video-source');
-                        videoSource.src = anime.video_url; // Используем ссылку на видео Anidub
-                        document.getElementById('anime-video').load();
+                        // Здесь устанавливаем URL на страницу видео с Anidub
+                        const iframe = document.getElementById('anime-iframe');
+                        iframe.src = anime.video_url; // Вставляем ссылку на страницу с плеером Anidub
 
                         // Показываем плеер
                         document.getElementById('video-section').style.display = 'block';
@@ -75,4 +71,5 @@
     </script>
 </body>
 </html>
+
 
