@@ -22,6 +22,14 @@
             <select id="dub-select"></select>
             <button id="watch-button">Смотреть</button>
         </section>
+
+        <section id="video-section" style="display: none;">
+            <h2>Смотреть аниме</h2>
+            <video id="anime-video" controls width="600">
+                <source id="video-source" src="" type="video/mp4">
+                Ваш браузер не поддерживает видео.
+            </video>
+        </section>
     </main>
 
     <footer>
@@ -49,14 +57,22 @@
                         option.innerText = dub;
                         dubSelect.appendChild(option);
                     });
+
+                    document.getElementById('watch-button').addEventListener('click', function() {
+                        const selectedDub = document.getElementById('dub-select').value;
+                        alert(`Вы выбрали озвучку: ${selectedDub}`);
+
+                        // Здесь устанавливаем URL видео
+                        const videoSource = document.getElementById('video-source');
+                        videoSource.src = anime.video_url;
+                        document.getElementById('anime-video').load();
+
+                        // Показываем плеер
+                        document.getElementById('video-section').style.display = 'block';
+                    });
                 }
             });
-
-        document.getElementById('watch-button').addEventListener('click', function() {
-            const selectedDub = document.getElementById('dub-select').value;
-            alert(`Вы выбрали озвучку: ${selectedDub}`);
-            // Здесь можно добавить логику для перехода на страницу просмотра аниме с выбранной озвучкой
-        });
     </script>
 </body>
 </html>
+
