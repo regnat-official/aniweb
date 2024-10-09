@@ -4,20 +4,20 @@
         "genre": "Экшен, Приключения",
         "description": "Молодой ниндзя ищет признания среди сверстников и мечтает стать Хокаге.",
         "dubs": ["Anidub", "Anistar"],
-        "video_url": "https://anidub.com/video_player/naruto"  // Ссылка на плеер Anidub
+        "video_url": "https://anidub.com/video_player/naruto"
     },
     {
         "title": "Атака титанов",
         "genre": "Экшен, Фэнтези",
         "description": "Люди борются за выживание против гигантских титанов.",
         "dubs": ["Anidub", "Shikimori"],
-        "video_url": "https://anidub.com/video_player/attack_on_titan"  // Ссылка на плеер Anidub
+        "video_url": "https://anidub.com/video_player/attack_on_titan"
     },
     {
         "title": "Моя геройская академия",
         "genre": "Экшен, Супергерой",
         "description": "В мире, где суперсилы обычны, мальчик, родившийся без них, мечтает стать героем.",
         "dubs": ["Anistar", "Anidub"],
-        "video_url": "https://anidub.com/video_player/my_hero_academia"  // Ссылка на плеер Anidub
+        "video_url": "https://anidub.com/video_player/my_hero_academia"
     }
 ]
