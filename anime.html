@@ -18,6 +18,9 @@
         <section id="anime-details">
             <h2>Жанр: <span id="anime-genre"></span></h2>
             <p id="anime-description"></p>
+            <label for="dub-select">Выберите озвучку:</label>
+            <select id="dub-select"></select>
+            <button id="watch-button">Смотреть</button>
         </section>
     </main>
 
@@ -38,8 +41,22 @@
                     document.getElementById('anime-name').innerText = anime.title;
                     document.getElementById('anime-genre').innerText = anime.genre;
                     document.getElementById('anime-description').innerText = anime.description;
+
+                    const dubSelect = document.getElementById('dub-select');
+                    anime.dubs.forEach(dub => {
+                        const option = document.createElement('option');
+                        option.value = dub;
+                        option.innerText = dub;
+                        dubSelect.appendChild(option);
+                    });
                 }
             });
+
+        document.getElementById('watch-button').addEventListener('click', function() {
+            const selectedDub = document.getElementById('dub-select').value;
+            alert(`Вы выбрали озвучку: ${selectedDub}`);
+            // Здесь можно добавить логику для перехода на страницу просмотра аниме с выбранной озвучкой
+        });
     </script>
 </body>
 </html>
