@@ -35,8 +35,20 @@ document.addEventListener('DOMContentLoaded', function() {
         const noResults = document.getElementById('no-results');
         noResults.style.display = filteredAnime.length === 0 ? 'block' : 'none';
     });
+
+    // Обработка нажатия кнопки поиска
+    document.getElementById('search-button').addEventListener('click', function() {
+        const searchTerm = document.getElementById('search-bar').value.toLowerCase();
+        const filteredAnime = animeData.filter(anime => anime.title.toLowerCase().includes(searchTerm));
+        displayAnime(filteredAnime);
+        
+        // Показать или скрыть сообщение о том, что аниме не найдено
+        const noResults = document.getElementById('no-results');
+        noResults.style.display = filteredAnime.length === 0 ? 'block' : 'none';
+    });
 });
 
 function viewAnime(title) {
     window.location.href = `anime.html?title=${encodeURIComponent(title)}`;
 }
+
