@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="anime-title"></title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 id="anime-name"></h1>
+        <nav>
+            <a href="index.html">Назад к главной</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="anime-details">
+            <h2>Жанр: <span id="anime-genre"></span></h2>
+            <p id="anime-description"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aniweb. Все права защищены.</p>
+    </footer>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const title = params.get('title');
+        
+        fetch('anime_data.json')
+            .then(response => response.json())
+            .then(data => {
+                const anime = data.find(a => a.title === title);
+                if (anime) {
+                    document.getElementById('anime-title').innerText = anime.title;
+                    document.getElementById('anime-name').innerText = anime.title;
+                    document.getElementById('anime-genre').innerText = anime.genre;
+                    document.getElementById('anime-description').innerText = anime.description;
+                }
+            });
+    </script>
+</body>
+</html>
