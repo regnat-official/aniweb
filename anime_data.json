@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Naruto",
+        "genre": "Action, Adventure",
+        "description": "A young ninja seeks recognition from his peers and dreams of becoming the Hokage."
+    },
+    {
+        "title": "Attack on Titan",
+        "genre": "Action, Fantasy",
+        "description": "Humans fight for survival against giant humanoid Titans."
+    },
+    {
+        "title": "My Hero Academia",
+        "genre": "Action, Superhero",
+        "description": "In a world where superpowers are common, a boy born without them dreams of becoming a hero."
+    }
+]

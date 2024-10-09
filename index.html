@@ -1,37 +1,29 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniWeb - Аниме Онлайн</title>
+    <title>Aniweb - Watch Anime Online</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo-container">
-            <h1 class="logo">AniWeb</h1>
-            <p class="tagline">Твой мир аниме онлайн</p>
-            <div class="contacts">
-                <a href="https://tiktok.com" target="_blank">
-                    <img src="images/tiktok-icon.png" alt="TikTok">
-                </a>
-                <a href="https://t.me" target="_blank">
-                    <img src="images/telegram-icon.png" alt="Telegram">
-                </a>
-                <a href="https://youtube.com" target="_blank">
-                    <img src="images/youtube-icon.png" alt="YouTube">
-                </a>
-            </div>
-        </div>
-        <input type="text" id="search" placeholder="Поиск аниме...">
+        <h1>Aniweb</h1> <!-- Название сайта -->
+        <nav>
+            <input type="text" id="search-bar" placeholder="Search for anime...">
+        </nav>
     </header>
 
     <main>
-        <h2>Популярные аниме</h2>
-        <div id="popular-anime">
-            <!-- Популярные аниме будут загружены сюда -->
-        </div>
+        <section id="popular-anime">
+            <h2>Popular Anime</h2>
+            <div id="anime-list"></div>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2024 Aniweb. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
