@@ -4,20 +4,48 @@
         "genre": "Экшен, Приключения",
         "description": "Молодой ниндзя ищет признания среди сверстников и мечтает стать Хокаге.",
         "dubs": ["Anidub", "Anistar"],
-        "video_url": "https://example.com/naruto.mp4"
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
     },
     {
         "title": "Атака титанов",
         "genre": "Экшен, Фэнтези",
         "description": "Люди борются за выживание против гигантских титанов.",
         "dubs": ["Anidub", "Shikimori"],
-        "video_url": "https://example.com/attack_on_titan.mp4"
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
     },
     {
         "title": "Моя геройская академия",
         "genre": "Экшен, Супергерой",
         "description": "В мире, где суперсилы обычны, мальчик, родившийся без них, мечтает стать героем.",
         "dubs": ["Anistar", "Anidub"],
-        "video_url": "https://example.com/my_hero_academia.mp4"
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+        "title": "Демон-убийца: Клинок, рассекающий демонов",
+        "genre": "Экшен, Приключения",
+        "description": "Мальчик становится охотником на демонов после того, как его семья была убита.",
+        "dubs": ["Anidub", "Shikimori"],
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+        "title": "Ван Пис",
+        "genre": "Приключения, Комедия",
+        "description": "Приключения Луффи и его команды в поисках легендарного сокровища.",
+        "dubs": ["Anidub", "Anistar"],
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+        "title": "Квадратные яйца",
+        "genre": "Комедия, Фэнтези",
+        "description": "Смешные и абсурдные приключения квадратных существ.",
+        "dubs": ["Anidub"],
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
+    },
+    {
+        "title": "Санктум",
+        "genre": "Драма, Мистика",
+        "description": "Студенты сталкиваются с неожиданными и страшными событиями.",
+        "dubs": ["Anidub"],
+        "video_url": "https://www.w3schools.com/html/mov_bbb.mp4"
     }
 ]
