@@ -62,9 +62,9 @@
                         const selectedDub = document.getElementById('dub-select').value;
                         alert(`Вы выбрали озвучку: ${selectedDub}`);
 
-                        // Здесь устанавливаем URL видео
+                        // Здесь устанавливаем URL видео с Anidub
                         const videoSource = document.getElementById('video-source');
-                        videoSource.src = anime.video_url;
+                        videoSource.src = anime.video_url; // Используем ссылку на видео Anidub
                         document.getElementById('anime-video').load();
 
                         // Показываем плеер
