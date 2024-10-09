@@ -1,0 +1,124 @@
+/* Основные настройки */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #ff4560; /* Яркий красный оттенок для аниме-стиля */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+    margin-bottom: 20px;
+}
+
+/* Стиль логотипа */
+.logo {
+    font-size: 48px;
+    color: white;
+    font-family: 'Comic Sans MS', cursive;
+    letter-spacing: 5px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.tagline {
+    font-size: 18px;
+    color: white;
+    margin-top: 5px;
+    letter-spacing: 1px;
+}
+
+/* Контакты */
+.contacts {
+    margin-top: 10px;
+}
+
+.contacts a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.contacts img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.contacts img:hover {
+    transform: scale(1.2);
+}
+
+/* Поиск */
+#search {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+#search:focus {
+    box-shadow: 0px 0px 10px rgba(255, 69, 96, 0.7);
+}
+
+/* Стили для популярного аниме */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 32px;
+    color: #ff4560;
+    margin-bottom: 20px;
+}
+
+/* Блоки с популярными аниме */
+#popular-anime {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.anime-card {
+    width: 200px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.anime-card img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.anime-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.anime-card p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 10px 10px 10px;
+}
