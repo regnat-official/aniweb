@@ -1,17 +1,20 @@
 [
     {
-        "title": "Naruto",
-        "genre": "Action, Adventure",
-        "description": "A young ninja seeks recognition from his peers and dreams of becoming the Hokage."
+        "title": "Наруто",
+        "genre": "Экшен, Приключения",
+        "description": "Молодой ниндзя ищет признания среди сверстников и мечтает стать Хокаге.",
+        "dubs": ["Anidub", "Anistar"]
     },
     {
-        "title": "Attack on Titan",
-        "genre": "Action, Fantasy",
-        "description": "Humans fight for survival against giant humanoid Titans."
+        "title": "Атака титанов",
+        "genre": "Экшен, Фэнтези",
+        "description": "Люди борются за выживание против гигантских титанов.",
+        "dubs": ["Anidub", "Shikimori"]
     },
     {
-        "title": "My Hero Academia",
-        "genre": "Action, Superhero",
-        "description": "In a world where superpowers are common, a boy born without them dreams of becoming a hero."
+        "title": "Моя геройская академия",
+        "genre": "Экшен, Супергерой",
+        "description": "В мире, где суперсилы обычны, мальчик, родившийся без них, мечтает стать героем.",
+        "dubs": ["Anistar", "Anidub"]
     }
 ]
