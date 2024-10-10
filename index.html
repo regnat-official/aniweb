@@ -3,30 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniweb - Смотрите аниме онлайн</title>
+    <title>Aniweb - Главная</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Aniweb</h1> <!-- Название сайта -->
+        <div style="display: flex; align-items: center;">
+            <img id="logo" src="logo.png" alt="Логотип Aniweb">
+            <h1>Aniweb</h1>
+        </div>
         <nav>
-            <input type="text" id="search-bar" placeholder="Поиск аниме...">
-            <button id="search-button">🔍</button>
+            <a href="index.html">Главная</a>
+            <a href="anime.html">Аниме</a>
+            <a href="news.html">Новости</a>
         </nav>
     </header>
 
     <main>
-        <section id="popular-anime">
-            <h2>Популярные аниме</h2>
-            <div id="anime-list"></div>
-            <div id="no-results" style="display: none;">Аниме не найдено.</div>
-        </section>
+        <h2>Популярные аниме</h2>
+        <div class="anime-list">
+            <?php include 'fetch_anime.php'; ?>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2024 Aniweb. Все права защищены.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
