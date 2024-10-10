@@ -1,3 +1,21 @@
+<?php
+// Подключение к базе данных
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "anime_db";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Проверка соединения
+if ($conn->connect_error) {
+    die("Ошибка подключения: " . $conn->connect_error);
+}
+
+// SQL-запрос для получения данных об аниме
+$sql = "SELECT * FROM anime_list";
+$result = $conn->query($sql);
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -8,21 +26,27 @@
 </head>
 <body>
     <header>
-        <div style="display: flex; align-items: center;">
-            <img id="logo" src="images/logo.png" alt="Логотип Aniweb">
-            <h1>Aniweb</h1>
-        </div>
-        <nav>
-            <a href="index.php">Главная</a>
-            <a href="anime.php">Аниме</a>
-            <a href="news.php">Новости</a>
-        </nav>
+        <h1>Добро пожаловать на Aniweb!</h1>
     </header>
-
+    
     <main>
         <h2>Популярные аниме</h2>
         <div class="anime-list">
-            <?php include 'fetch_anime.php'; ?>
+            <?php
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo "<div class='anime-item'>";
+                    echo "<h2>" . $row["title"] . "</h2>";
+                    echo "<img src='" . $row["image_url"] . "' alt='" . $row["title"] . "'>";
+                    echo "<p>Жанр: " . $row["genre"] . "</p>";
+                    echo "<p>Дата выхода: " . $row["release_date"] . "</p>";
+                    echo "<p>" . $row["description"] . "</p>";
+                    echo "</div>";
+                }
+            } else {
+                echo "Нет данных об аниме.";
+            }
+            ?>
         </div>
     </main>
 
@@ -31,3 +55,7 @@
     </footer>
 </body>
 </html>
+<?php
+$conn->close();
+?>
+
