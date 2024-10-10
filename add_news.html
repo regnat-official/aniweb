@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить новость - Aniweb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Добавление новости</h1>
+        <nav>
+            <a href="index.html">Главная</a> |
+            <a href="anime.html">Аниме</a> |
+            <a href="news.html">Новости</a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="news-form">
+            <label for="title">Заголовок:</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+
+            <label for="date">Дата (ГГГГ-ММ-ДД):</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="content">Содержание:</label><br>
+            <textarea id="content" name="content" rows="5" required></textarea><br><br>
+
+            <button type="submit">Добавить новость</button>
+        </form>
+
+        <p id="status-message" style="color: green; display: none;">Новость успешно добавлена!</p>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Aniweb. Все права защищены.</p>
+    </footer>
+
+    <script>
+        document.getElementById('news-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Получаем данные из формы
+            const title = document.getElementById('title').value;
+            const date = document.getElementById('date').value;
+            const content = document.getElementById('content').value;
+
+            // Загружаем текущие новости
+            fetch('news_data.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Добавляем новую новость
+                    data.unshift({ title: title, date: date, content: content });
+
+                    // Отправляем обновленный JSON на сервер (локально этот шаг можно опустить)
+                    fetch('save_news.php', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            document.getElementById('status-message').style.display = 'block';
+                        }
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
