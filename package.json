@@ -1,0 +1,19 @@
+{
+  "name": "anime-website",
+  "version": "1.0.0",
+  "description": "Anime viewing website with login and registration",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "bcrypt": "^5.0.1",
+    "express-session": "^1.17.1",
+    "body-parser": "^1.19.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
