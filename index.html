@@ -1,36 +1,35 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aniweb - Главная</title>
-    
-    <!-- Подключение CSS-файла -->
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniWeb — Главная</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <img id="logo" src="images/logo.png" alt="Логотип Aniweb">
-            <h1 id="site-title">Aniweb</h1>
-        </div>
-        <nav>
-            <a href="index.php">Главная</a>
-            <a href="anime.php">Аниме</a>
-            <a href="news.php">Новости</a>
-        </nav>
-    </header>
+  <header>
+    <h1>Добро пожаловать на AniWeb</h1>
+    <nav>
+      <a href="/login">Вход</a>
+      <a href="/register">Регистрация</a>
+      <a href="/about">О проекте</a>
+    </nav>
+  </header>
 
-    <main>
-        <h2>Популярные аниме</h2>
-        <div class="anime-list">
-            <!-- Здесь выводим список аниме -->
-        </div>
-    </main>
+  <main>
+    <section id="popular-anime">
+      <h2>Популярные аниме</h2>
+      <!-- Здесь можно вывести список популярных аниме -->
+      <div class="anime-list">
+        <a href="/anime/1" class="anime-item">Наруто</a>
+        <a href="/anime/2" class="anime-item">Атака титанов</a>
+        <a href="/anime/3" class="anime-item">Ван-Пис</a>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Aniweb. Все права защищены.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 AniWeb. Все права защищены.</p>
+  </footer>
 </body>
 </html>
-
